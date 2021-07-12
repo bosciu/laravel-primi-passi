@@ -15,7 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 Route::get('/', function () {
     $data = [
-        "todos" => ["Portare fuori il cane", "Fare la spesa"]
+        "todos" => ["Portare fuori il cane", "Fare la spesa", "Respirare"]
     ];
     return view('homepage', $data);
 });

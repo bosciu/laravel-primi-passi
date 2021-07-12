@@ -24,6 +24,24 @@
         h2{
             text-align: center;
         }
+        .container{
+            width: 80%;
+            margin: auto;
+        }
+        ul{
+            padding-top: 50px;
+            text-align: center;
+            list-style: none;
+            font-size: 30px;
+        }
+        li{
+            width: 60%;
+            margin: auto;
+            padding: 20px;
+        }
+        .even{
+            background-color: grey;
+        }
     </style>
 </head>
 <body>
@@ -32,7 +50,11 @@
         <h2>Cose da fare:</h2>
         <ul>
         @foreach ($todos as $todo)
-            <li>{{$todo}}</li>
+            @if ($loop->even)
+                <li class="even">{{$todo}}</li>
+            @else
+                <li>{{$todo}}</li>
+            @endif
         @endforeach
         </ul>
     </div>
