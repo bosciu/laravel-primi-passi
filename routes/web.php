@@ -14,5 +14,8 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    $data = [
+        "todos" => ["Portare fuori il cane", "Fare la spesa"]
+    ];
+    return view('homepage', $data);
 });
